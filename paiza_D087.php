@@ -2,7 +2,7 @@
 
 // 標準入力より数値を取得
 
- $i = trim(fgets(STDIN));　//1行目を取得
+ $i = trim(fgets(STDIN)); //1行目を取得
  while ($line = fgets(STDIN)) { //2行目から取得
      $t[] = trim($line);
     }
