@@ -12,7 +12,7 @@
     foreach ($nums as $num) {
         $total += $num;
     }
-    echo 15-$total;
+    echo 15 - $total;
     
     // clear
 ?>
