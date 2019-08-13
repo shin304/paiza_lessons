@@ -1,11 +1,12 @@
 <?php
-    
 
-    while($input = fgets(STDIN)) {
-        $strings[] = trim($input);
+while ($input = trim(fgets(STDIN))) {
+    if ($input === "yes") {
+        $yes[] = $input;
+    } else {
+        $no[] = $input;
     }
-    // var_dump($strings);
+}
+// var_dump($yes);
     
-    //　手順　1.格納　2.noの数をカウントして出力
-    //　分からない点　配列に値を格納した後に、noの数をカウントする方法
-?>
+    echo count($no);
