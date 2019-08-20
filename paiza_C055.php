@@ -15,11 +15,11 @@
         }  
     }
         // var_dump($array);
-        if (count($arrays) >= 1) {
-            foreach ($arrays as $array) {
-                echo $array . PHP_EOL;
-            }
-        } else {
+    if (count($arrays) >= 1) {
+        foreach ($arrays as $array) {
+            echo $array . PHP_EOL;
+        }
+    } else {
             echo "None";
         }
     
