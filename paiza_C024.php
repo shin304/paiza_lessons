@@ -7,15 +7,15 @@
         $results[] = trim($line);
     }
 
-        $answer1 = 0;
-        $answer2 = 0;
+    $answer1 = 0;
+    $answer2 = 0;
     foreach ($results as $result) {
         $items = explode(" ", $result);
         // set add sub をわける
         $function = array_splice($items, 0, 1)[0];
 
         switch ($function) {
-            
+
             case "SET" :
                 if ($items[0] == 1) {
                     $answer1 = $items[1];
