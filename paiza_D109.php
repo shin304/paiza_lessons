@@ -1,14 +1,17 @@
 <?php
-    // 自分の得意な言語で
-    // Let's チャレンジ！！
+
 
     $input = trim(fgets(STDIN));
-    $date = explode(" ", $input);
-    // var_dump($date); die();
+    $string  = preg_replace("/( )/", "", $input );
+    // var_dump($string);
+    $items = str_split($string);
+    // var_dump($items);
     
-    if (preg_match("/$date[1]/", $date[0])) {
+    if (count(array_unique($items)) == 1) {
         echo "Yes";
     } else {
         echo "No";
     }
+    
+    // var_dump($base);
 ?>
