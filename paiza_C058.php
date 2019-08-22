@@ -1,5 +1,6 @@
 <?php
-
+    // 自分の得意な言語で
+    // Let's チャレンジ！！
 
     $line = trim(fgets(STDIN));
     $box = explode(" ", $line);
@@ -9,14 +10,12 @@
     
     $roll = 0;
     
-    // 初めから同じなら処理はせず0と表示
     if ($box[1] == $box[2]) {
         echo 0;
         exit;
     }
     
-    foreach ($bases as $base) {
-        
+    for ($i = 0; $i <= count($bases); $i++) {
         
         // 抜き出した要素
         $pull = array_shift($bases); 
@@ -32,8 +31,6 @@
         // 処理が終わったらカウント
         $roll++;
         // var_dump($roll);die();
-        
-        // 同じなら出力
         if ($box[1] == $result) {
             echo $roll;
             exit;
