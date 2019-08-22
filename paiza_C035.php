@@ -1,6 +1,6 @@
 <?php
 
-$num = trim(fgets(STDIN));
+    $num = trim(fgets(STDIN));
     while($input = fgets(STDIN)) {
         $results[] = trim($input);
     }
