@@ -1,13 +1,13 @@
 <?php
-    // 自分の得意な言語で
-    // Let's チャレンジ！！
+    
 
-    $base = explode(" ",fgets(STDIN));
+    $input = trim(fgets(STDIN));
+    $base = explode(" ", $input);
     $num = trim(fgets(STDIN));
     while ($line = fgets(STDIN)) {
         $items[] = trim($line);
     }
-    var_dump($items);
+    // var_dump($items);
     foreach ($items as $item) {
         
         $pos = explode(" ",$item);
@@ -19,7 +19,7 @@
         $r2 = $base[3] ** 2;
         if ( $r1 <= $xcyc && $xcyc <= $r2) {
         
-        var_dump($base[3] ** 2);
+        // var_dump($base[3] ** 2);
         echo "yes" . PHP_EOL;
         } else {
         echo "no" . PHP_EOL;
