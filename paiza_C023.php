@@ -1,39 +1,21 @@
 <?php
-    // 自分の得意な言語で
-    // Let's チャレンジ！！
 
+    // 当たり番号
     $line = fgets(STDIN);
-    $atari = explode(" ",trim($line)); // 当たり番号
-    // var_dump($atari);die();
+    $atari = explode(" ",trim($line)); 
     
     // 購入枚数
-    $buy = fgets(STDIN);
+    $buy = trim(fgets(STDIN));
     
+    // 各くじ番号
     while ($input = fgets(STDIN)) {
-        $kuzi[] = explode(" ",trim($input)); // 各くじ番号
-    }
-    // var_dump($kuzi);
-    // array_intersect
-    
-    // $hit = array_intersect($atari,$kuzi);
-    
-    //　番号が同じならhitに格納
-    foreach ($kuzi as $value1) {
-        foreach ($atari as $value2) {
-            if ($value1 == $value2) {
-                $hit[] = $value1;
-                // var_dump($hit);
-            }
-            
-        }
+        $kuzi[] = explode(" ",trim($input)); 
     }
     
-    foreach ($hit as $value3) {
-        
-        echo count($value3) . PHP_EOL;
+    // 該当番号を抽出、出力のループ処理
+    for ($i = 0; $i < $buy; $i++) {
+        $hit = array_intersect($atari,$kuzi[$i]);
+        echo count($hit) . PHP_EOL;
     }
     
-    // foreach ($hits as $hit) {
-    //     echo count()
-    // }
-?>
+    
